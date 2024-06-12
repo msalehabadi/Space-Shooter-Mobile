@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
+
+public class PlayerControls : MonoBehaviour
+{
+    private Camera mainCam;
+    // Start is called before the first frame update
+    void Start()
+    {
+        mainCam = Camera.main;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Touch.fingers[0].isActive)
+        {
+            Touch myTouch = Touch.activeTouches[0];
+            Vector3 touchPos = myTouch.screenPosition;
+            touchPos = Camera.main.ScreenToWorldPoint(touchPos);
+
+            transform.position = new Vector3(touchPos.x, touchPos.y, 0);
+        }
+    }
+
+    private void OnEnable()
+    {
+        EnhancedTouchSupport.Enable();
+    }
+
+    private void OnDisable()
+    {
+        EnhancedTouchSupport.Disable();
+    }
+}
