@@ -64,7 +64,7 @@ public class PlayerControls : MonoBehaviour
         maxLeft = mainCam.ViewportToWorldPoint(new Vector2(0.15f, 0)).x;
         maxRight = mainCam.ViewportToWorldPoint(new Vector2(0.85f, 0)).x;
 
-        maxDown = mainCam.ViewportToWorldPoint(new Vector2(0, 0.05f)).y;
+        maxDown = mainCam.ViewportToWorldPoint(new Vector2(0, 0.08f)).y;
         maxUp = mainCam.ViewportToWorldPoint(new Vector2(0, 0.6f)).y;
     }
 }
