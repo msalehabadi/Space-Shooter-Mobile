@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Meteor : Enemy
 {
-    // Start is called before the first frame update
+    [SerializeField] private float minSpeed;
+    [SerializeField] private float maxSpeed;
+    private float speed;
     void Start()
     {
-        
+        speed = Random.Range(minSpeed, maxSpeed);
+        rb.velocity = Vector2.down * speed;
     }
 
     // Update is called once per frame
@@ -24,5 +27,14 @@ public class Meteor : Enemy
     public override void DeathSequence()
     {
        
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherColl)
+    {
+        if (otherColl.CompareTag("Player"))
+        {
+            Destroy(otherColl.gameObject);
+        }
+        
     }
 }
