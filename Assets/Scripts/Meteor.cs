@@ -37,4 +37,8 @@ public class Meteor : Enemy
         }
         
     }
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
