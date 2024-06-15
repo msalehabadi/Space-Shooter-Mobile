@@ -7,6 +7,7 @@ public class Meteor : Enemy
     [SerializeField] private float minSpeed;
     [SerializeField] private float maxSpeed;
     private float speed;
+    [SerializeField] private float rotateSpeed;
     void Start()
     {
         speed = Random.Range(minSpeed, maxSpeed);
@@ -16,7 +17,7 @@ public class Meteor : Enemy
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
     }
 
     public override void HurtSequence()
