@@ -423,7 +423,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.91
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1173,7 +1173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 313.8, y: -124}
+  m_AnchoredPosition: {x: 274.4, y: -198.5}
   m_SizeDelta: {x: 236.802, y: 44.552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1381372589
@@ -1502,6 +1502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   healthFill: {fileID: 1986063974}
+  explostionPrefab: {fileID: 7185326181368878468, guid: 583be3ee936638a4eabb50d7177180c3, type: 3}
 --- !u!1 &1472301258
 GameObject:
   m_ObjectHideFlags: 0
