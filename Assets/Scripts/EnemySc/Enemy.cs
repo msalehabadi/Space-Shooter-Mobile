@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] protected float damage;
     [SerializeField] protected GameObject explostionPrefeb;
+
+    [SerializeField] protected Animator anim;
     void Start()
     {
         
