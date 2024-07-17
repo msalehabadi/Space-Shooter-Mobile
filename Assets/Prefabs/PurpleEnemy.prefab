@@ -109,6 +109,7 @@ MonoBehaviour:
   damage: 1
   explostionPrefeb: {fileID: 7185326181368878468, guid: 583be3ee936638a4eabb50d7177180c3, type: 3}
   anim: {fileID: 8335499937845051461}
+  scoreValue: 10
   speed: 5
   shootInterval: 1
   leftCanon: {fileID: 8335499938843250369}

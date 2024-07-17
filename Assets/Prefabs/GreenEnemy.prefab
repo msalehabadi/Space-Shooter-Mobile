@@ -107,6 +107,7 @@ MonoBehaviour:
   damage: 2
   explostionPrefeb: {fileID: 7185326181368878468, guid: 583be3ee936638a4eabb50d7177180c3, type: 3}
   anim: {fileID: 327227687127907213}
+  scoreValue: 10
   speed: 10
 --- !u!50 &327227687127907201
 Rigidbody2D:

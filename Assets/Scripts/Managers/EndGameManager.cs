@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RTLTMPro;
+using TMPro;
 
 public class EndGameManager : MonoBehaviour
 {
@@ -8,6 +10,10 @@ public class EndGameManager : MonoBehaviour
     public bool gameOver;
 
     private PanelController panelController;
+
+    private TextMeshProUGUI scoreTextComponent;
+
+    private int score;
     private void Awake()
     {
         if (endManager == null)
@@ -22,6 +28,12 @@ public class EndGameManager : MonoBehaviour
     void Start()
     {
 
+    }
+
+    public void UpdateScore(int addScore)
+    {
+        score += addScore;
+        scoreTextComponent.text = "امتیاز: "+ score.ToString();
     }
     public void StartResolveSequence()
     {
@@ -47,6 +59,7 @@ public class EndGameManager : MonoBehaviour
     
     public void WinGame()
     {
+
         panelController.ActivateWin();
     }
 
@@ -55,7 +68,13 @@ public class EndGameManager : MonoBehaviour
         panelController.ActivateLose();
     }
 
-    public void RegisterPanelController(PanelController pC){
+    public void RegisterPanelController(PanelController pC)
+    {
         panelController = pC;
+    }
+
+    public void RegisterScoreText(TextMeshProUGUI scoreTextComp)
+    {
+        scoreTextComponent = scoreTextComp;
     }
 }
