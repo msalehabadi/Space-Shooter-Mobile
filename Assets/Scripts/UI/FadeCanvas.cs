@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FadeCanvas : MonoBehaviour
 {
     public static FadeCanvas fader;
 
     [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private GameObject loadingScreen;
+    [SerializeField] private Image loadingBar;
     [SerializeField] private float changeValue;
     [SerializeField] private float waitTime;
     [SerializeField] private bool fadeStarted = false;
@@ -39,6 +42,7 @@ public class FadeCanvas : MonoBehaviour
 
     IEnumerator FadeIn()
     {
+        loadingScreen.SetActive(false);
         fadeStarted = false;
         while (canvasGroup.alpha > 0)
         {
@@ -59,8 +63,20 @@ public class FadeCanvas : MonoBehaviour
             canvasGroup.alpha += changeValue;
             yield return new WaitForSeconds(waitTime);
         }
-        SceneManager.LoadScene(levelName);
-        yield return new WaitForSeconds(0.1f);
+        // SceneManager.LoadScene(levelName);
+        AsyncOperation ao = SceneManager.LoadSceneAsync(levelName);
+        ao.allowSceneActivation = false;
+        loadingScreen.SetActive(true);
+        loadingBar.fillAmount= 0;
+        while (ao.isDone == false)
+        {
+            loadingBar.fillAmount = ao.progress / 0.9f;
+            if(ao.progress == 0.9f){
+                 ao.allowSceneActivation = true;
+            }
+            yield return null;
+        }
+        
         StartCoroutine(FadeIn());
     }
 
@@ -76,8 +92,18 @@ public class FadeCanvas : MonoBehaviour
             canvasGroup.alpha += changeValue;
             yield return new WaitForSeconds(waitTime);
         }
-        SceneManager.LoadScene(levelIndex);
-        yield return new WaitForSeconds(0.1f);
+        AsyncOperation ao = SceneManager.LoadSceneAsync(levelIndex);
+        ao.allowSceneActivation = false;
+        loadingScreen.SetActive(true);
+        loadingBar.fillAmount= 0;
+        while (ao.isDone == false)
+        {
+            loadingBar.fillAmount = ao.progress / 0.9f;
+            if(ao.progress == 0.9f){
+                 ao.allowSceneActivation = true;
+            }
+            yield return null;
+        }
         StartCoroutine(FadeIn());
     }
 }
