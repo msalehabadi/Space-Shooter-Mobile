@@ -53,6 +53,10 @@ public class FadeCanvas : MonoBehaviour
 
     IEnumerator FadeOutString(string levelName)
     {
+        if (canvasGroup.alpha != 0)
+        {
+            yield break;
+        }
         if (fadeStarted)
         {
             yield break;
