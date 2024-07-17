@@ -10,6 +10,7 @@ public class PanelController : MonoBehaviour
     void Start()
     {
         
+        EndGameManager.endManager.RegisterPanelController(this);
     }
 
     // Update is called once per frame
