@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RTLTMPro;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndGameManager : MonoBehaviour
 {
@@ -59,15 +60,26 @@ public class EndGameManager : MonoBehaviour
     
     public void WinGame()
     {
-
+        ScoreSet();
         panelController.ActivateWin();
     }
 
     public void LoseGame()
     {
+        ScoreSet();
         panelController.ActivateLose();
     }
 
+    private void ScoreSet()
+    {
+        PlayerPrefs.SetInt("امتیاز"+SceneManager.GetActiveScene().name,score);
+        int highScore = PlayerPrefs.GetInt("بیشترین امتیاز"+ SceneManager.GetActiveScene().name,0);
+        if (score > highScore)
+        {
+            PlayerPrefs.SetInt("بیشترین امتیاز"+ SceneManager.GetActiveScene().name,score);
+        }
+        score = 0;
+    }
     public void RegisterPanelController(PanelController pC)
     {
         panelController = pC;
