@@ -58,7 +58,7 @@ public class PurpleEnemy : Enemy
         Destroy(gameObject);
     }
 
-    private void nBecameInvisible()
+    private void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
