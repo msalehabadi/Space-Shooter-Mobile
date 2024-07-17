@@ -322,7 +322,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.765218
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1812,14 +1812,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1889439656}
+    - target: {fileID: 4615806443070501894, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LevelSelection
+      objectReference: {fileID: 0}
     - target: {fileID: 4615806443250177932, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1889439656}
+    - target: {fileID: 4615806443342925904, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4615806444109642525, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1889439656}
+    - target: {fileID: 4615806444109642525, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LevelSelection
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
