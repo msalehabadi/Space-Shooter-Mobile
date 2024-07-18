@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spwnThreshold: 80
   powerUp:
-  - {fileID: 327227687127907212, guid: 17abacd36c9541443854df25d67e4265, type: 3}
+  - {fileID: 886398004635649639, guid: d17822168ad78f34eb71c91a13675a1f, type: 3}
