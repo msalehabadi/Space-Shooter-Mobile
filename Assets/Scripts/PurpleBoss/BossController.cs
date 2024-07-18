@@ -12,6 +12,7 @@ public enum BossState
 public class BossController : MonoBehaviour
 {
     [SerializeField] private BossEnter bossEnter;
+    [SerializeField] private BossFire bossFire;
     [SerializeField] private bool test;
     [SerializeField] private BossState testState;
     // Start is called before the first frame update
@@ -29,7 +30,7 @@ public class BossController : MonoBehaviour
                  bossEnter.RunState();
                  break;
             case BossState.fire:
-                 Debug.Log("Do Somthing");
+                 bossFire.RunState();
                  break;
             case BossState.special:
                  Debug.Log("Do Somthing");
