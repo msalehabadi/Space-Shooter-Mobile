@@ -16,3 +16,4 @@ MonoBehaviour:
   powerUp:
   - {fileID: 886398004635649639, guid: d17822168ad78f34eb71c91a13675a1f, type: 3}
   - {fileID: 3285624631240052913, guid: 7761cbb110d80404da1a04f7c86a3316, type: 3}
+  - {fileID: 4381468621628532800, guid: fe8948edd5778a04796cef1248c53a12, type: 3}

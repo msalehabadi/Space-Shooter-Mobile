@@ -13,12 +13,15 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private GameObject explostionPrefab;
     [SerializeField] private Shield shield;
 
+    private PlayerShooting playerShooting;
+
     private bool canPlayAnim = true;
     void Start()
     {
         health = maxHealth;
         healthFill.fillAmount = health / maxHealth;
         EndGameManager.endManager.gameOver = false;
+        playerShooting = GetComponent<PlayerShooting>();
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class PlayerStats : MonoBehaviour
             anim.SetTrigger("Damage");
             StartCoroutine(AntiSpamAnimation());
         }
+        playerShooting.DecreaseUpgrade();
         if (health <= 0)
         {
             EndGameManager.endManager.gameOver = true;
