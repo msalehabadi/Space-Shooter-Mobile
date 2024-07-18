@@ -266,6 +266,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4615806444613628358, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
   m_PrefabInstance: {fileID: 4615806444276363785}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &510328938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 204742733221166197, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+  m_PrefabInstance: {fileID: 4615806444276363785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +566,11 @@ SpriteRenderer:
 --- !u!1 &583128818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4615806443718501627, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+  m_PrefabInstance: {fileID: 4615806444276363785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &681204508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5247625158623096676, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
   m_PrefabInstance: {fileID: 4615806444276363785}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &841996492
@@ -862,6 +872,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1237168000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9046002771639303274, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+  m_PrefabInstance: {fileID: 4615806444276363785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1271152863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,6 +1734,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 204742733221166197, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4615806442960325760, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1835,6 +1854,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: LevelSelection
       objectReference: {fileID: 0}
+    - target: {fileID: 5247625158623096676, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967718857486284144, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046002771639303274, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f2217e56ee9eaac4d834dd2ac17e2d5b, type: 3}
@@ -1917,6 +1948,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 208433743, guid: e9781cbe64bd0354d97d67a436f6dd83, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208433744, guid: e9781cbe64bd0354d97d67a436f6dd83, type: 3}
+      propertyPath: shieldBase.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 208433744, guid: e9781cbe64bd0354d97d67a436f6dd83, type: 3}
+      propertyPath: shieldBase.Array.data[0]
+      value: 
+      objectReference: {fileID: 1237168000}
+    - target: {fileID: 208433744, guid: e9781cbe64bd0354d97d67a436f6dd83, type: 3}
+      propertyPath: shieldBase.Array.data[1]
+      value: 
+      objectReference: {fileID: 510328938}
+    - target: {fileID: 208433744, guid: e9781cbe64bd0354d97d67a436f6dd83, type: 3}
+      propertyPath: shieldBase.Array.data[2]
+      value: 
+      objectReference: {fileID: 681204508}
     - target: {fileID: 6582952899157063385, guid: e9781cbe64bd0354d97d67a436f6dd83, type: 3}
       propertyPath: m_Name
       value: Player
