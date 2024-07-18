@@ -358,7 +358,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.769601
+  orthographic size: 8.91
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1559,6 +1559,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3179224884029765675, guid: 9ba4cd5986919b44a9e45f57b8c4e748, type: 3}
   m_PrefabInstance: {fileID: 3179224885804800944}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1795311049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795311050}
+  m_Layer: 7
+  m_Name: SpecialPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1795311050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795311049}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1831662421}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796147710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1770,8 @@ GameObject:
   - component: {fileID: 1831662420}
   - component: {fileID: 1831662419}
   - component: {fileID: 1831662418}
+  - component: {fileID: 1831662422}
+  - component: {fileID: 1831662423}
   - component: {fileID: 1831662416}
   - component: {fileID: 1831662415}
   - component: {fileID: 1831662414}
@@ -1873,6 +1906,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossEnter: {fileID: 1831662418}
+  bossFire: {fileID: 1831662422}
+  bossSpecial: {fileID: 1831662423}
   test: 1
   testState: 0
 --- !u!212 &1831662420
@@ -1943,9 +1978,46 @@ Transform:
   - {fileID: 638833216}
   - {fileID: 1770850448}
   - {fileID: 1034806061}
+  - {fileID: 1795311050}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1831662422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831662412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ed882708f5ce5409e5a663b05638c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  shootRate: 1
+  bulletPrefab: {fileID: 5600430865601596964, guid: 89c18fc5988f2fb42b88dd0d7c1da90f, type: 3}
+  shootPoint:
+  - {fileID: 749724451}
+  - {fileID: 638833216}
+  - {fileID: 1770850448}
+  - {fileID: 1034806061}
+--- !u!114 &1831662423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831662412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161174a22fb1f28488931e9132973a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  waitTime: 5
+  specialBullet: {fileID: 5956681107530746178, guid: c03cd1658eb31e24c83c6d4273e810b0, type: 3}
+  shootingPoint: {fileID: 1795311050}
 --- !u!114 &1889439656 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9007323601238862817, guid: 49cb60d5bdb89bd46b3808baec1132a3, type: 3}
