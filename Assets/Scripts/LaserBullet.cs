@@ -17,6 +17,7 @@ public class LaserBullet : MonoBehaviour
     {
         Enemy enemy = collision.GetComponent<Enemy>();
         enemy.TakeDamage(damage);
+        Debug.Log("Enemy is taking damage");
         Destroy(gameObject);
     }
 

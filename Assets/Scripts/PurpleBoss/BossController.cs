@@ -14,6 +14,10 @@ public class BossController : MonoBehaviour
     [SerializeField] private BossEnter bossEnter;
     [SerializeField] private BossFire bossFire;
     [SerializeField] private BossSpecial bossSpecial;
+    [SerializeField] private BossDeath bossDeath;
+
+
+
     [SerializeField] private bool test;
     [SerializeField] private BossState testState;
     // Start is called before the first frame update
@@ -37,7 +41,10 @@ public class BossController : MonoBehaviour
                  bossSpecial.RunState();
                  break;
             case BossState.death:
-                 Debug.Log("Do Somthing");
+                 bossEnter.StopState();
+                 bossFire.StopState();
+                 bossSpecial.StopState();
+                 bossDeath.RunState();
                  break;
         }
     }

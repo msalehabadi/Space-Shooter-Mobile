@@ -35,7 +35,7 @@ public class SpecialBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void  OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -44,7 +44,7 @@ public class SpecialBullet : MonoBehaviour
         }
     }
 
-    private void  OnBecameInvisible()
+    private void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
