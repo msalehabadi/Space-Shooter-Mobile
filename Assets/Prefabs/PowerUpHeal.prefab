@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 2
+  clipToPlay: {fileID: 8300000, guid: e2124103bda973e4ba760fee71d13532, type: 3}
 --- !u!50 &4853676478400676417
 Rigidbody2D:
   serializedVersion: 4
