@@ -2258,6 +2258,14 @@ PrefabInstance:
       propertyPath: healthFill
       value: 
       objectReference: {fileID: 1986063974}
+    - target: {fileID: 6582952899157063395, guid: e9781cbe64bd0354d97d67a436f6dd83, type: 3}
+      propertyPath: laserBullet
+      value: 
+      objectReference: {fileID: 9147030163427177052, guid: c1cd0e2aa4adb7a46871266f81dc28ed, type: 3}
+    - target: {fileID: 6582952899157063395, guid: e9781cbe64bd0354d97d67a436f6dd83, type: 3}
+      propertyPath: shootingInterval
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e9781cbe64bd0354d97d67a436f6dd83, type: 3}
@@ -2418,7 +2426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8841862323473839771, guid: d9ac5d65c7e1768479c246424f9fc44f, type: 3}
       propertyPath: hasBoss
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8841862323473839771, guid: d9ac5d65c7e1768479c246424f9fc44f, type: 3}
       propertyPath: possibleWinTime
