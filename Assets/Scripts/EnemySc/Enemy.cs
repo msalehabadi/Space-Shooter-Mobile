@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected GameObject explostionPrefeb;
 
     [SerializeField] protected Animator anim;
-    [Header("امتیاز"),SerializeField] 
+    [Header("Score"),SerializeField] 
     protected int scoreValue;
     void Start()
     {
