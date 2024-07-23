@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d13748df5ac54f36b28d4f85ab22b0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 98e25eada52255a2b81c529d6b925441, type: 3}
   m_Name: GoogleMobileAdsSettings
   m_EditorClassIdentifier: 
-  adMobAndroidAppId: ca-app-pub-3940256099942544~3347511713
+  adMobAndroidAppId: 
   adMobIOSAppId: 
   delayAppMeasurementInit: 0
   enableKotlinXCoroutinesPackagingOption: 1

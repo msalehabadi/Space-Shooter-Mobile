@@ -31,6 +31,8 @@ public class PlayerShooting : MonoBehaviour
     private ObjectPool<LaserBullet> pool;
     private float intervalReset;
 
+    public AudioClip laserGun;
+
     private void Awake()
     {
         pool = new ObjectPool<LaserBullet>(CreatePoolObj,OnTakeBulletFromPool,OnReturnBulletFromPool,OnDestroyPoolObj,true,10,30);
@@ -87,6 +89,7 @@ public class PlayerShooting : MonoBehaviour
     private void Shoot()
     {
         source.Play();
+        
         switch (upgradeLevel)
         {
             case 0 :

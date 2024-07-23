@@ -10,6 +10,8 @@ public class PanelController : MonoBehaviour
 
     public GameObject settingsPanel;
     public GameObject exitPanel;
+    public GameObject pausePanel;
+
     void Start()
     {
         
@@ -25,6 +27,7 @@ public class PanelController : MonoBehaviour
     public void ActivateLose(){
         cGroup.alpha = 1;
         loseScreen.SetActive(true);
+        cGroup.blocksRaycasts = true;
     }
 
     public void ShowSettingsPanel()
@@ -45,6 +48,16 @@ public class PanelController : MonoBehaviour
     public void HideExitPanel()
     {
         exitPanel.SetActive(false);
+    }
+
+    public void ShowPausePanel()
+    {
+        pausePanel.SetActive(true);
+    }
+
+    public void HidePausePanel()
+    {
+        pausePanel.SetActive(false);
     }
 
     public void QuitGame()

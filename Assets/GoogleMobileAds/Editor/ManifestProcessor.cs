@@ -235,12 +235,12 @@ public class ManifestProcessor : IPreprocessBuild
 
     private void StopBuildWithMessage(string message)
     {
-        string prefix = "[GoogleMobileAds] ";
-    #if UNITY_2017_1_OR_NEWER
-        throw new BuildPlayerWindow.BuildMethodException(prefix + message);
-    #else
-        throw new OperationCanceledException(prefix + message);
-    #endif
+    //     string prefix = "[GoogleMobileAds] ";
+    // #if UNITY_2017_1_OR_NEWER
+    //     throw new BuildPlayerWindow.BuildMethodException(prefix + message);
+    // #else
+    //     throw new OperationCanceledException(prefix + message);
+    // #endif
     }
 }
 #endif
