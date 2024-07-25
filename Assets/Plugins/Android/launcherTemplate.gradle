@@ -5,6 +5,7 @@ dependencies {
     }
 
 android {
+	namespace "**NAMESPACE**"
     compileSdkVersion **APIVERSION**
     buildToolsVersion '**BUILDTOOLS**'
 
